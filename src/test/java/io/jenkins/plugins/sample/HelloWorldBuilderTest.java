@@ -22,6 +22,7 @@ public class HelloWorldBuilderTest {
         FreeStyleProject project = jenkins.createFreeStyleProject();
         project.getBuildersList().add(new HelloWorldBuilder(name));
         project = jenkins.configRoundtrip(project);
+        System.out.println("jennifer test here, run in verify??");
         jenkins.assertEqualDataBoundBeans(new HelloWorldBuilder(name), project.getBuildersList().get(0));
     }
 
